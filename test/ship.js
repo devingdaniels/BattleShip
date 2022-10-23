@@ -1,14 +1,21 @@
 // Carrier(5), Battleship(4), Cruiser(3), Submarine(3), and Destroyer (2)
 
-const ship = (length, name = "_default") => {
+const ship = (type) => {
   let hits = 0;
   const hit = () => {
     hits += 1;
   };
-  const getName = () => name;
+  const getName = () => type.name;
+  const getId = () => type.id;
   const getHits = () => hits;
-  const isSunk = () => hits === length;
-  return { name, length, hit, getHits, getName, isSunk };
+  const getLength = () => type.length;
+  const isSunk = () => {
+    if (hits === type.length) {
+      return true;
+    }
+    return false;
+  };
+  return { getName, getId, getLength, hit, getHits, isSunk };
 };
 
 module.exports = ship;
