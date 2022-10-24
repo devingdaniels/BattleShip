@@ -18,7 +18,6 @@ function App() {
       <header>
         <Header/>
       </header>
-
       <main>
         <Routes>
           <Route path='/' element={<WelcomePage/>}></Route>

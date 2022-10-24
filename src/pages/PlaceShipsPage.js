@@ -5,8 +5,10 @@ import {Link} from 'react-router-dom'
 const PlaceShipsPage = () => {
   return (
     <>
-    <div>PlaceShipsPage</div>
-    <Link to='/game-board'>Ready for Battle!</Link>
+      <h2>Place your ships, Captain</h2>
+      <Link to='/game-board'>
+        <button>Ready for Battle</button>
+      </Link>
     </>
   )
 }
