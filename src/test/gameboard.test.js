@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import GameBoard from "./gameboard";
 import Ship from "./ship";
-import Shipyard from "../shipyard";
+import Shipyard from "../shipFleet";
 
 // Create a game
 const game = GameBoard();

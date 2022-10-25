@@ -1,6 +1,6 @@
 
 import ship from "./ship";
-import Shipyard from '../shipyard'
+import Shipyard from '../shipFleet'
 
 test("1: Testing ship getName(), get ID(), function", () => {
   const destroyer = ship(Shipyard[4]);

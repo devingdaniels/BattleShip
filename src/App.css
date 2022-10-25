@@ -1,22 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
-
 :root {
   --deepBlueBackgroundColor: linear-gradient(
-    to right,
-    rgb(28, 1, 110),
-    rgb(19, 141, 172),
-    rgb(28, 1, 110)
+    to bottom,
+    rgb(19, 171, 209),
+    rgb(16, 3, 58)
   );
-  --appDefaultFont: "Oswald", sans-serif;
+  --appDefaultFont: Verdana, Geneva, Tahoma, sans-serif;
+  --pagePadding: 1% 0px 1% 0px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
 }
 
 body {
@@ -27,42 +22,61 @@ body {
 main {
 }
 
-main {
-  overflow: hidden;
-}
-
 a {
   text-decoration: none;
 }
 
+/* Home Page Classes */
+
 .homePage {
-  height: 72vh;
+  height: 100vh;
   background-image: var(--deepBlueBackgroundColor);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: var(--pagePadding);
 }
 
-header {
+.battleShipHeading {
+  font-size: 8em;
+  color: rgb(69, 0, 173);
+}
+
+.placeShipsPage {
   background-image: var(--deepBlueBackgroundColor);
-  font-size: 3em;
-  color: silver;
-  text-align: center;
+  height: 100vh;
 }
 
-footer {
-  background-color: rgb(77, 77, 77);
-  color: white;
-  height: 50px;
+.footer {
+  color: rgb(61, 171, 135);
+}
+
+/* Place Ships Page Classes */
+.placeShipsPage {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: var(--pagePadding);
+  color: rgb(16, 3, 58);
+  font-weight: bolder;
 }
 
-/* CSS */
-.startGame {
+.placeShipsGrid {
+  height: 500px;
+  width: 500px;
+  background-color: rgb(0, 0, 0, 0.8);
+  box-shadow: rgb(0, 255, 170) 0 0 7px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+/* Buttons CSS */
+
+.nextScreenButton {
+  display: flex;
   align-items: center;
-  appearance: none;
   background-image: radial-gradient(
     100% 100% at 100% 0,
     #5adaff 0,
@@ -72,42 +86,28 @@ footer {
   border-radius: 6px;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #fff;
+  color: black;
   cursor: pointer;
-  display: inline-flex;
   font-family: var(--appDefaultFont);
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
+  height: 32px;
+  padding: 20px;
   text-decoration: none;
-  transition: box-shadow 0.15s, transform 0.15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow, transform;
+  transition: box-shadow 0.25s, transform 0.25s;
   font-size: 18px;
 }
 
-.startGame:focus {
+.nextScreenButton:focus {
   box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
 
-.startGame:hover {
+.nextScreenButton:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
-.startGame:active {
+.nextScreenButton:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
