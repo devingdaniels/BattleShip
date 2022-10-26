@@ -1,5 +1,4 @@
 // Carrier(5), Battleship(4), Cruiser(3), Submarine(3), and Destroyer (2)
-
 const ship = (type) => {
   let hits = 0;
   const hit = () => {

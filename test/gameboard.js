@@ -27,7 +27,7 @@ const GameBoard = () => {
     if (board[y][x] !== "") {
       board[y][x].hit();
       return "hit";
-      // Call the hit function on the ship and check if sunk
+      // Call the hit function on the ship and check if sunk f
     }
     return "miss";
     // Record the shot on the array and update the UI
