@@ -1,16 +1,17 @@
 /* eslint-disable no-plusplus */
+
 const GameBoard = () => {
   const board = [
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""]
+    ['', '', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '', '', '', ''],
   ];
   const placeShip = (y, x, ship, vertical) => {
     if (vertical === true) {
@@ -24,19 +25,19 @@ const GameBoard = () => {
     }
   };
   const receiveAttack = (y, x) => {
-    if (board[y][x] !== "") {
+    if (board[y][x] !== '') {
       board[y][x].hit();
-      return "hit";
+      return 'hit';
       // Call the hit function on the ship and check if the ship is sunk
     }
-    return "miss";
+    return 'miss';
     // Record the shot on the array and update the UI
   };
   const getValueAtCoord = (y, x) => {
-    if (board[y][x] !== "") {
+    if (board[y][x] !== '') {
       return board[y][x].getId();
     }
-    return "";
+    return '';
   };
   return { receiveAttack, placeShip, getValueAtCoord };
 };
