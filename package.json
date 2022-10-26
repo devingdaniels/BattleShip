@@ -1,0 +1,27 @@
+{
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "Battleship application - Human VS AI",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/devingdaniels/BattleShip.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devingdaniels/BattleShip/issues"
+  },
+  "homepage": "https://github.com/devingdaniels/BattleShip#readme",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
+    "jest": "^29.2.2"
+  }
+}
