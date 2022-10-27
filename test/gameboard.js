@@ -33,13 +33,14 @@ const GameBoard = () => {
     return 'miss';
     // Record the shot on the array and update the UI
   };
+  // Development testing function
   const getValueAtCoord = (y, x) => {
     if (board[y][x] !== '') {
-      return board[y][x].getId();
+      return board[y][x];
     }
     return '';
   };
   return { receiveAttack, placeShip, getValueAtCoord };
 };
 
-module.exports = GameBoard;
+export default GameBoard;

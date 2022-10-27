@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
-import ship from './ship';
-import Shipyard from '../shipFleet';
+import Ship from './Ship';
+import Fleet from '../Fleet';
 
 test('1: Testing ship getName(), get ID(), function', () => {
-  const destroyer = ship(Shipyard[4]);
+  const destroyer = Ship(Fleet[4]);
   expect(destroyer.getName()).toBe('Destroyer');
   expect(destroyer.getId()).toBe('des2');
   // Try and change the ID
@@ -12,13 +12,13 @@ test('1: Testing ship getName(), get ID(), function', () => {
 });
 
 test('2: Testing ship hit(), getHit() function', () => {
-  const cruiser = ship(Shipyard[2]);
+  const cruiser = Ship(Fleet[2]);
   cruiser.hit();
   expect(cruiser.getHits()).toBe(1);
 });
 
 test('3: Testing ship getHits() function', () => {
-  const submarine = ship(Shipyard[3]);
+  const submarine = Ship(Fleet[3]);
   submarine.hit();
   submarine.hit();
   submarine.hit();
@@ -26,7 +26,7 @@ test('3: Testing ship getHits() function', () => {
 });
 
 test('4: Testing ship isSunk() function', () => {
-  const carrier = ship(Shipyard[0]);
+  const carrier = Ship(Fleet[0]);
   carrier.hit();
   carrier.hit();
   carrier.hit();

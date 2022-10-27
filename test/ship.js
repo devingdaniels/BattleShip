@@ -1,10 +1,9 @@
-// Carrier(5), Battleship(4), Cruiser(3), Submarine(3), and Destroyer (2)
-
-const ship = (type) => {
+const Ship = (type) => {
   let hits = 0;
   const hit = () => {
     hits += 1;
   };
+  // Use getter function so prop is immutable
   const getName = () => type.name;
   const getId = () => type.id;
   const getHits = () => hits;
@@ -20,4 +19,4 @@ const ship = (type) => {
   };
 };
 
-module.exports = ship;
+export default Ship;
