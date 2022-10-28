@@ -28,19 +28,28 @@ const GameBoard = () => {
     if (board[y][x] !== '') {
       board[y][x].hit();
       return 'hit';
-      // Call the hit function on the ship and check if the ship is sunk
     }
     return 'miss';
-    // Record the shot on the array and update the UI
+  };
+  // Check if all ships on the board are sunk
+  const isFleetSunk = () => {
+    for (let i = 0; i < board.length; i++) {
+      for (let j = 0; j < board[i].length; j++) {
+        if (board[i][j] !== '') {
+          if (board[i][j].isSunk() === true) {
+            console.log(board[i][j].getName());
+            return true;
+          }
+        }
+      }
+    }
+    return false;
   };
   // Development testing function
-  const getValueAtCoord = (y, x) => {
-    if (board[y][x] !== '') {
-      return board[y][x];
-    }
-    return '';
+  const getValueAtCoord = (y, x) => board[y][x];
+  return {
+    receiveAttack, placeShip, getValueAtCoord, isFleetSunk,
   };
-  return { receiveAttack, placeShip, getValueAtCoord };
 };
 
 export default GameBoard;

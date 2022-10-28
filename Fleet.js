@@ -1,18 +1,18 @@
 const Fleet = [
   {
-    name: 'Carrier', length: 5, id: 'car5', placed: false,
+    name: 'Carrier', id: 'car5', length: 5,
   },
   {
-    name: 'Battleship', length: 4, id: 'bat4', placed: false,
+    name: 'Battleship', id: 'bat4', length: 4,
   },
   {
-    name: 'Cruiser', length: 3, id: 'cru3', placed: false,
+    name: 'Cruiser', id: 'cru3', length: 3,
   },
   {
-    name: 'Submarine', length: 3, id: 'sub3', placed: false,
+    name: 'Submarine', id: 'sub3', length: 3,
   },
   {
-    name: 'Destroyer', length: 2, id: 'des2', placed: false,
+    name: 'Destroyer', id: 'des2', length: 2,
   },
 ];
 
