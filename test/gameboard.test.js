@@ -44,9 +44,8 @@ test('Test 4: Testing getting ships from the array after adding fleet', () => {
     gameBoard2.placeShip(i, i, Ship(Fleet[i]));
   }
   // Sink the first ship
-  gameBoard2.receiveAttack(1, 1);
-  gameBoard2.receiveAttack(1, 2);
-  gameBoard2.receiveAttack(1, 3);
-  gameBoard2.receiveAttack(1, 4);
+  gameBoard2.receiveAttack(2, 2);
+  gameBoard2.receiveAttack(2, 3);
+  gameBoard2.receiveAttack(2, 4);
   expect(gameBoard2.isFleetSunk()).toBe(true);
 });
