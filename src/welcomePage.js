@@ -1,3 +1,1 @@
-import './style.css';
-
-alert('hellow from welcome page');
+import './welcomePage.css';

@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2em;
+  background-image: 0;
+  background-image: linear-gradient(to bottom, #0b79f7 0%, #000000 100%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 4em;
+  margin-top: 1%;
+}
+
+/* CSS */
+#playNowButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.5em;
+  width: max-content;
+}
+
+#playNowButton:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #7b8eed,
+    #4b66ed,
+    #002bff,
+    #2d4ef1,
+    #002afc,
+    #c085ff,
+    #9641f2,
+    #7c01ff,
+    #3d0c71
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: playNowButton 20s linear infinite;
+  transition: opacity 0.1s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes playNowButton {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#playNowButton:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: #222; */
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+footer {
+  margin-bottom: 1%;
+  color: white;
+  font-size: 0.4em;
+}

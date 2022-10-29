@@ -2,7 +2,7 @@
 import GameBoard from './GameBoard';
 
 function AI() {
-  // Holds random moves made by the AI
+  // Holds all previous to ensure no duplicates
   const memory = [];
   // AI's game board
   const board = GameBoard();
