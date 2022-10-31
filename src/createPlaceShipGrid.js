@@ -1,18 +1,17 @@
 /* eslint-disable no-plusplus */
 import './placeShips.css';
 
-function setShip(e) {
+function placeShipFromCoords(e) {
   const y = e.target.getAttribute('yCoord');
   const x = e.target.getAttribute('xCoord');
-  console.log(`y:${y}, x:${x}`);
+  console.log(`from getCoords... y:${y}, x:${x}`);
+  return { y, x };
 }
-function changeColor(e) {
-  e.target.style.backgroundColor = 'blue';
-}
-
-function createGrid() {
+function createPlaceShipGrid() {
   // Get the parent container
   const gridContainer = document.getElementById('gridContainer');
+  // Clear the previous grid
+  gridContainer.innerHTML = '';
   // Set the grid size
   const gridSize = 10;
   // Update parent grid rules
@@ -29,14 +28,11 @@ function createGrid() {
       gridSquare.setAttribute('yCoord', y);
       gridSquare.setAttribute('xCoord', x);
       gridSquare.addEventListener('click', (e) => {
-        setShip(e);
-      });
-      gridSquare.addEventListener('mouseover', (e) => {
-        changeColor(e);
+        placeShipFromCoords(e);
       });
       gridContainer.appendChild(gridSquare);
     }
   }
 }
 
-export default createGrid;
+export default createPlaceShipGrid;
